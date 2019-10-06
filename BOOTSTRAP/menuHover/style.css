@@ -1,0 +1,72 @@
+body {
+    background-color: #2ecc72;    
+}
+div {
+    /* padding: 100px;
+    margin: 100px; */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.first {
+    background-color: #EAF0F1;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    margin: 100px;
+	text-decoration: none;
+}
+nav ul{
+    float: left;
+}
+
+nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a{
+    display: block;
+    color: #4C4B4B;
+    font-size: 25px;
+    padding: 22px 14px;
+    text-decoration: none;
+}
+
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: #EAF0F1;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    
+    width: 150px;
+    border-radius: 4px;
+}
+
+
+nav ul li ul li a{
+	
+	
+   padding: 8px 14px;
+}
+
+nav ul li ul li a:hover{
+    background-color: bisque;
+	text-decoration: none;
+	
+}

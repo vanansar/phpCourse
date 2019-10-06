@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover</title>
+    <style>
+        .menu ul {
+            float: left;
+        }
+
+        .menu ul li {
+            float: left;
+            list-style: none;
+            /* important */
+            position: relative;
+        }
+        /* Important */
+        .menu ul li ul {
+            display: none;
+            /* important */
+            position: absolute;
+            background-color: #EAF0F1;
+            padding: 10px;
+            border-radius: 0px 0px 4px 4px;
+        }
+
+        ul li {
+            padding: 10px;
+            display: inline;
+        }
+
+        .menu ul {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .menu ul li ul {
+            display: none;
+        }
+
+        .menu ul li:hover ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="#">home</a>
+                <ul>
+                    <li>Home</li>
+                    <li>sara</li>
+                    <li>Html</li>
+                </ul>
+            </li>
+            <li><a href="#">About</a>
+                <ul>
+                        <li>java</li>
+                        <li>spring</li>
+                        <li>j2ee</li>
+                    </ul>
+                </li>
+            <li><a href="#">Contact</a>
+                <ul>
+                        <li>PHP</li>
+                        <li>jquery</li>
+                        <li>Css</li>
+                    </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

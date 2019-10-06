@@ -1,0 +1,33 @@
+h1 {
+	line-height: 10;
+	letter-spacing: 20;
+	text-align: center;
+	text-decoration: italic;
+	text-indent: 10;
+	
+}
+
+p {
+	text-transform: uppercase;
+}
+
+.para {
+	text-transform: none;
+	font-size: 30px;
+	font-variant: normal;
+	font-style: italic;
+	font-weight: bold;
+		border-style:  dashed;
+		border-color: red;
+		border-bottom-color: blue;
+		border-bottom-style: solid;
+		border-width: medium;
+
+	
+}
+
+.list {
+	list-style-position: inside;
+	list-style-type: georgian;
+}
+

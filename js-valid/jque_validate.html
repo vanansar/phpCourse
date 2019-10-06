@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+
+<!-- jquery validate.js  -->
+<script src="jquery-2.2.4.js"></script>
+
+<script src="jquery.validate.js"></script>
+
+<script>
+
+$(document).ready(function(){
+	
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+
+$("#form1").validate({
+
+
+rules: {
+
+   ret_email: {
+   
+   email:true,
+   required:true
+   },
+   
+    ret_password: {
+	
+   required:true
+   
+   }
+   
+  /* dimage:{
+                    required: true,
+                    type: 'video/mp4'
+                }  */
+   
+   }, messages: {
+      ret_email: {
+	   
+	            email: "Enter the valid Email",
+				required: "Email is Mandotory"
+				},
+				
+				ret_password: {
+	   
+				required: "Password is Mandotory"
+				}
+				
+				/*dimage:{
+					
+					required:"Choose the file",
+					type:'select video file'	
+				}*/
+				
+				
+
+          
+}
+
+
+});
+
+
+$('INPUT[type="file"]').change(function () {
+    var ext = this.value.match(/\.(.+)$/)[1];
+    switch (ext) {
+        case 'jpg':
+        case 'jpeg':
+        case 'png':
+        case 'gif':
+           // $('#uploadButton').attr('disabled', false);
+            break;
+        default:
+            alert('This is not an allowed file type.');
+            this.value = '';
+    }
+});
+
+$('#form1').submit(function(event) {
+   var file = $('input[type=file]').val();       
+
+   if ( ! file) {
+       alert('The file is required.');
+       event.preventDefault();
+       return;
+   } 
+
+ 
+
+});
+
+});
+
+
+
+</script>
+
+<style>
+
+label.error {
+
+          color:red;
+		  display:inline-flexbox;
+		  }
+
+</style>
+
+</head>
+<body>
+<form id="form1" action="retailerlog_action.php" method="post" >
+						<input type="text"  class="form-control" id="ret_email" name="ret_email" placeholder="Email Id"><br><br>
+						<input type="password" id="ret_password" class="form-control" name="ret_password"  placeholder="Password">
+                         <input type="file" name="dimage" id="dimage" />
+                        <br><br>
+						
+						<!--<input type="submit" name="Sign In" id="btn_log"  value="Login">-->
+						
+						<input type="submit" name="Sign In"  value="Login">
+</body>
+</html>

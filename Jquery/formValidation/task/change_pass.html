@@ -1,0 +1,124 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Untitled Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!-- jquery validate.js  -->
+	<script src="../js/jquery.min.js"></script>
+
+	<script src="../js/jquery.validate.min.js"></script>
+
+	 <script>
+
+		$(document).ready(function () {
+
+			$("#chg_pass").validate({
+
+				rules: {
+					old_pass: {
+
+						required: true,
+					},
+
+					new_pass: {
+
+						required: true,
+						minlength: 8,
+						mypassword: true
+					},
+
+					txt_Password: {
+
+						required: true,
+						equalTo: "#new_pass"
+					}
+
+				}, messages: {
+
+
+					old_pass: {
+
+						required: "*Old Password is Mandatory"
+
+					},
+
+					new_pass: {
+
+						required: "*New Password is Mandatory",
+
+					},
+
+					txt_Password: {
+
+						required: "*Confirm Password is Mandatory"
+
+					}
+				}
+			});
+
+
+			$.validator.addMethod('mypassword', function (value, element) {
+				return this.optional(element) || (value.match(/[a-zA-Z]/) && value.match(/[0-9]/));
+			},
+				'Password must contain at least one numeric and one alphabetic character.');
+		});
+
+	</script> 
+	<style>
+		label.error {
+
+			color: red;
+			display: inline-flexbox;
+			position: absolute;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<center>
+
+		<form action="" id="chg_pass" method="post">
+			<div class="row">
+				<div class="col-sm-12 ">
+					<center><label style="color:#FFF">Old Password:</label>&nbsp;&nbsp;<input class="input-lg"
+							style="font-weight:bold" id="old_pass" name="old_pass" type="password"><i style="color:#FFF"
+							id="showoldHide" class="glyphicon glyphicon-eye-open"></i></center>
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-sm-12 ">
+					<center><label style="color:#FFF">New Password:</label><input class="input-lg"
+							style="font-weight:bold" id="new_pass" name="new_pass" type="password"><i style="color:#FFF"
+							id="shownewHide" class="glyphicon glyphicon-eye-open"></i>
+					</center>
+				</div>
+			</div><br>
+
+			<div class="row">
+				<div class="col-sm-12 ">
+					<center><label style="color:#FFF">Confirm Password:</label><input class="input-lg"
+							style="font-weight:bold" id="txt_Password" name="txt_Password" type="password"><i
+							style="color:#FFF" id="showHide" class="glyphicon glyphicon-eye-open"></i>
+						</span></center>
+				</div>
+			</div><br /><br />
+			<div class="row">
+				<div class="col-sm-12 ">
+					<center><input type="submit" class="btn btn-primary" value="Change Password"></center><br>
+
+				</div>
+			</div>
+		</form>
+	
+	
+</body>
+
+</html>

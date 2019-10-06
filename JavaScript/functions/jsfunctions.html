@@ -1,0 +1,39 @@
+
+<html>
+
+<head>
+   
+    <title>Prac--Coloring Div</title>
+    <script>
+      function getColor()
+	  {
+		var div = document.createElement('div');
+		div.setAttribute('id', 'divc');
+		div.style.width = "500px";
+		div.style.height = "500px";
+		div.style.margin = "20px";
+		div.style.background = "red";
+		document.body.appendChild(div);
+	  }
+	 function changeColor() {
+		var color = document.getElementById('usercolor').value;
+		var chan = document.getElementById('divc');
+		chan.style.background = color;
+	  }
+	   
+    </script>
+</head>
+
+<body >
+	<h1 id="h" >HTML</h1>
+	
+	<input type="submit" onclick="getColor()">
+	<br>
+	<br>
+	<input type="color" value="Change Color" id="usercolor" >
+<br>
+	<br>
+	<input type="submit" value="Change Color" onclick="changeColor()">
+</body>
+
+</html>

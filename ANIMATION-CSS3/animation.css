@@ -1,0 +1,40 @@
+body {
+	
+	background-color: whitesmoke;	
+}
+
+div
+{
+	width: 100%;
+	height: 500px;
+	-webkit-animation: sara 5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 2s;
+}
+@-webkit-keyframes sara
+{
+	0%
+	{
+		background-color: #009;
+	}
+	25% 
+	{
+		background-color: #900;
+	}
+	505% 
+	{
+		background-color: #090;
+	}
+	75% 
+	{
+		background-color: #100;
+	}
+	100% 
+	{
+		background-image: url("../pictures/pic2.jpg");
+		object-fit: cover;
+		width: 100%;
+		height: 500px;
+	}
+	}
+	

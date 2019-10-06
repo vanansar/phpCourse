@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<title>Jquery-Form Validation </title>
+	<style>
+		form {
+			border: 0px solid;
+		}
+
+		label.error {
+
+			color: red;
+			position:relative;
+		}
+		label {
+			float: right;
+		}
+	</style>
+</head>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="formValidation.js"></script>
+
+<body>
+
+		<h2>Jquery - Form Validation</h2>
+
+		<form  id="formValid" method="post">
+			Name:<input type="text" name="uname" id="uname">
+			<br> <br>
+			Age : <input type="text" name="age" id="age">
+			<br> <br>
+			Mobile:<input type="text" name="mobile" id="mobile">
+			<br> <br>
+			Email:<input type="text" name="email" id="email">
+			<br> <br>
+			password : <input type="password" name="password" id="password">
+			<br> <br>
+			Gender :
+			<input type="radio" name="gender" id="male">
+			Male
+			<input type="radio" name="gender" id="female">
+			feMale
+			<br> <br>
+			Education : <select name="education" id="education">
+				<option value="0">Qualification</option>
+				<option value="1">Bsc</option>
+				<option value="2">Msc</option>
+				<option value="3">BCA</option>
+				<option value="4">MCA</option>
+			</select>
+			<br> <br>
+			File : <input type="file" id="sfile" name="sfile">
+			<br> <br>
+			
+			<input type="submit" name="button" value="Submit" id="button">
+
+		</form>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+	<script type="text/javascript" src="script.js">
+	</script>
+	<style>
+	 body{
+	 background-color: whitesmoke;
+	 text-align: center;
+	 }
+	 
+	 
+	</style>
+	</head>
+	
+	<body>
+	
+		<h1>empty Validation</h1>
+		
+		<form method="POST" action="sec.html">
+		<!-- Date: <input type="date" > -->
+		<br>  <br>
+		Name : <input type="text" id="name" >
+		<br> <br>
+		Age  : <input type="number" id="age">
+		<br> <br>
+		Mobile : <input type="number" id="mobile">
+		<br> <br>
+		Email : <input type="text" id="email">
+		<br> <br>
+		password : <input type="password" id="password">
+		<br> <br>
+		Gender : <input type="radio" name="gen"  id="male">Male
+		<input type="radio" name="gen" id="female">feMale
+		<br> <br>
+		<select id="qualification" onclick="drop()">
+		<option value="0">qualification</option>
+		<option value="1">B.sc</option>
+		<option value="2">M.sc</option>
+		</select>
+		
+		<br> <br>
+		File : <input type="file" id="file">
+		
+		<br> <br>
+		<input type="submit" onclick="return getValidation()" id="btn"  >
+		
+		
+		</form>
+	</body>
+
+
+
+
+</html>

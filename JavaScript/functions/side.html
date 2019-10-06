@@ -1,0 +1,60 @@
+
+<html>
+
+<head>
+   
+    <title>Prac--Functions</title>
+    <script>
+       function change() {
+	   var txt = document.getElementById('txt').value;
+	   var chang = document.getElementById('h');
+		chang.innerHTML = txt;
+	   }
+	   
+	   function over() {
+		var col = document.getElementById('h');
+		col.style.color = "red";
+	   }
+	   function out() {
+		var col = document.getElementById('h');
+		col.style.color = "black";
+	   }
+	   
+	   	function clickC(){	
+		var check = document.getElementById('myCheck');
+		var btn = document.getElementById('btn');
+	   
+		if(check.checked == true) {
+			btn.disabled = false;
+				alert('check box checked');
+		}
+		else 
+		{
+			btn.disabled = true;
+		}
+	   }
+	   
+    </script>
+</head>
+
+<body ><!-- onload="alert('Welcome');" -->
+	<h1 id="h" onmouseover="over()" onmouseout="out()">HTML</h1>
+	
+	
+	<input type="text" id="txt">
+	<br>
+	<br>
+	<input type ="submit" onclick="change()">
+	
+	<hr>
+	<hr>
+	
+	<p>i accept Terms and Condition</p>
+ <input type="checkbox" id="myCheck"  onclick="clickC()">
+ 
+	<input type="submit" id="btn" disabled >
+	
+	
+</body>
+
+</html>
